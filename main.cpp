@@ -13,7 +13,7 @@ void TimestampEcho(const string& value)
 	istringstream in{ value };
 	string line;
 	while (getline(in, line))
-		cout << put_time("[%Y-%m-%d %H:%M:%S] ", &tm) << line << '\n';
+		cout << put_time(&tm, "[%Y-%m-%d %H:%M:%S] ") << line << '\n';
 }
 
 int main(int argc, char** argv)
