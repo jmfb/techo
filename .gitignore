@@ -1,2 +1,9 @@
 .git
+.vs
 bin
+Debug
+Release
+x64
+*.tar.gz
+*.rpm
+*.nupkg

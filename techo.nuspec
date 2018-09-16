@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>techo</id>
+		<title>techo</title>
+		<version>$version$</version>
+		<authors>Jacob Buysse</authors>
+		<owners>Jacob Buysse</owners>
+		<summary>Timestamp echo.</summary>
+		<description>Timestamp echo.</description>
+		<projectUrl>https://github.com/jmfb/techo</projectUrl>
+		<tags>CLI timestamp echo</tags>
+		<licenseUrl>https://www.gnu.org/licenses/gpl-3.0.txt</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="x64\Release\techo.exe" target="tools" />
+	</files>
+</package>
