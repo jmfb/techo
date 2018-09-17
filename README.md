@@ -14,10 +14,16 @@ You must have the following tools installed and available in the path: `msbuild,
 
 ## Linux Build and Deploy - `make`
 
-Prerequisites:
+CentOS Prerequisites:
 
 ```bash
 sudo yum install make gcc-c++ -y
+```
+
+Ubuntu Prerequisites:
+
+```bash
+sudo apt-get install make g++ -y
 ```
 
 * `make` - Build the `techo` application to the `bin` directory.
@@ -25,9 +31,13 @@ sudo yum install make gcc-c++ -y
 * `make install` - Builds and installs the application to `/usr/local/bin`.
 * `make uninstall` - Removes the application from `/usr/local/bin`.
 
-## Linux Build and Deploy - `rpm`
+## CentOS Build and Deploy - `rpm`
 
 TODO: Figuring rpm build and deploy still.
+
+## Ubuntu Build and Deploy - `deb`
+
+TODO: Figuring deb build and deploy still.
 
 ## Example Usage
 
@@ -35,3 +45,4 @@ TODO: Figuring rpm build and deploy still.
 # techo "Foo"
 [2018-01-02 15:44:36] Foo
 ```
+
