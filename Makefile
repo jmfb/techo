@@ -1,7 +1,7 @@
 all: techo
 
 techo: output
-	g++ -std=c++11 main.cpp -o bin/techo
+	g++ -std=c++1z -Wall -Werror -O3 *.cpp -o bin/techo
 
 output:
 	mkdir bin -p
