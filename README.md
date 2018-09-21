@@ -36,7 +36,7 @@ TODO: Figuring rpm build and deploy still.
 
 ## Ubuntu Build and Deploy - `deb`
 
-* `make package-deb` - Build the `techo_${version}_amd64.deb` package to the `bin` directory.
+* `make package-deb` - Build the `techo_${version}_amd64.deb` package to the `bin` directory.  Need to build first.
 * `make clean-deb` - Removes the `deb` specific artifacts from the `bin` directory.
 * `sudo make install-deb` - Installs the `deb` package.  Need to package first.
 * `sudo make uninstall-deb` - Uninstalls the `deb` package.
