@@ -1,0 +1,10 @@
+Package: techo
+Version: 1.0.0-1
+Maintainer: Jacob Buysse <jacob.buysse@gmail.com>
+Description: Timestamp echo.
+ Standard echo but with each line prefixed with the current timestamp.
+Section: utils
+Priority: optional
+Architecture: amd64
+Homepage: https://github.com/jmfb/techo
+
