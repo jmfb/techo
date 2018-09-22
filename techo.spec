@@ -1,7 +1,7 @@
 Name: techo
-Version: 1.0.0
+Version: %{version}
 Release: 1
-License: GPLv3+
+License: GPLv3
 URL: https://github.com/jmfb/techo
 Packager: Jacob Buysse <jacob.buysse@gmail.com>
 Summary: Timestamp echo

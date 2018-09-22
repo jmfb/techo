@@ -37,7 +37,6 @@ sudo apt-get install make g++ dpkg -y
 * `sudo make install-rpm` - Installs the `rpm` package.  Need to package first.
 * `sudo make uninstall-rpm` - Uninstalls the `rpm` package.
 
-TODO: Update `package-rpm` to replace a version string in `techo.spec` file.
 TODO: Figure out a good way to publish and pull from a remote location.
 
 ## Ubuntu Build and Deploy - `deb`

@@ -1,7 +1,8 @@
 SHELL := /bin/bash
 OUTDIR := bin
 BIN := techo
-VERSION := 1.0.0-1
+RELEASE_VERSION := 1.0.0
+VERSION := $(RELEASE_VERSION)-1
 ARCH_DEB := amd64
 ARCH_RPM := x86_64
 DEB := $(BIN)_$(VERSION)_$(ARCH_DEB).deb
@@ -46,7 +47,7 @@ clean-deb:
 package-rpm:
 	mkdir -p ./$(OUTDIR)/BUILDROOT/$(RPM_NAME)$(INSTALL_DIR)
 	cp ./$(OUTDIR)/$(BIN) ./$(OUTDIR)/BUILDROOT/$(RPM_NAME)$(INSTALL_DIR)
-	rpmbuild -bb $(BIN).spec --define="_topdir $$(pwd)/$(OUTDIR)"
+	rpmbuild -bb $(BIN).spec --define="_topdir $$(pwd)/$(OUTDIR)" --define="version $(RELEASE_VERSION)"
 
 install-rpm:
 	rpm -i ./$(OUTDIR)/RPMS/$(ARCH_RPM)/$(RPM)
