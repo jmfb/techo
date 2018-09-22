@@ -46,7 +46,6 @@ TODO: Figure out a good way to publish and pull from a remote location.
 * `sudo make install-deb` - Installs the `deb` package.  Need to package first.
 * `sudo make uninstall-deb` - Uninstalls the `deb` package.
 
-TODO: Update `package-deb` to replace a version string in `control` file.
 TODO: Figure out a good way to publish and pull from a remote location.
 
 ## Example Usage

@@ -30,7 +30,7 @@ package-deb:
 	mkdir -p ./$(OUTDIR)/debian$(INSTALL_DIR)
 	mkdir -p ./$(OUTDIR)/debian/DEBIAN
 	cp ./$(OUTDIR)/$(BIN) ./$(OUTDIR)/debian$(INSTALL_DIR)
-	cp control ./$(OUTDIR)/debian/DEBIAN
+	(cat control | sed "s/{version}/$(RELEASE_VERSION)/g") > ./$(OUTDIR)/debian/DEBIAN/control
 	find ./$(OUTDIR)/debian -type d | xargs chmod 0755
 	dpkg-deb --build ./$(OUTDIR)/debian ./$(OUTDIR)/$(DEB)
 
@@ -41,8 +41,7 @@ uninstall-deb:
 	dpkg -r $(BIN)
 
 clean-deb:
-	rm -rf ./$(OUTDIR)/debian
-	rm -rf ./$(OUTDIR)/$(DEB)
+	rm -rf ./$(OUTDIR)/{debian,$(DEB)}
 
 package-rpm:
 	mkdir -p ./$(OUTDIR)/BUILDROOT/$(RPM_NAME)$(INSTALL_DIR)
