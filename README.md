@@ -16,7 +16,7 @@ You must have the following tools installed and available in the path: `msbuild,
 CentOS Prerequisites:
 
 ```bash
-sudo yum install make gcc-c++ -y
+sudo yum install make gcc-c++ rpm -y
 ```
 
 Ubuntu Prerequisites:
@@ -32,7 +32,13 @@ sudo apt-get install make g++ dpkg -y
 
 ## CentOS Build and Deploy - `rpm`
 
-TODO: Figuring rpm build and deploy still.
+* `make package-rpm` - Build the `techo-${version}.x86_64.rpm` package in the `bin` directory.  Need to build first.
+* `make clean-rpm` - Removes the `rpm` specific artifacts from the `bin` directory.
+* `sudo make install-rpm` - Installs the `rpm` package.  Need to package first.
+* `sudo make uninstall-rpm` - Uninstalls the `rpm` package.
+
+TODO: Update `package-rpm` to replace a version string in `techo.spec` file.
+TODO: Figure out a good way to publish and pull from a remote location.
 
 ## Ubuntu Build and Deploy - `deb`
 

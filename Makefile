@@ -1,8 +1,12 @@
+SHELL := /bin/bash
 OUTDIR := bin
 BIN := techo
 VERSION := 1.0.0-1
-ARCH := amd64
-DEB := $(BIN)_$(VERSION)_$(ARCH).deb
+ARCH_DEB := amd64
+ARCH_RPM := x86_64
+DEB := $(BIN)_$(VERSION)_$(ARCH_DEB).deb
+RPM_NAME := $(BIN)-$(VERSION).$(ARCH_RPM)
+RPM := $(RPM_NAME).rpm
 INSTALL_DIR := /usr/local/bin
 
 all: build
@@ -38,4 +42,18 @@ uninstall-deb:
 clean-deb:
 	rm -rf ./$(OUTDIR)/debian
 	rm -rf ./$(OUTDIR)/$(DEB)
+
+package-rpm:
+	mkdir -p ./$(OUTDIR)/BUILDROOT/$(RPM_NAME)$(INSTALL_DIR)
+	cp ./$(OUTDIR)/$(BIN) ./$(OUTDIR)/BUILDROOT/$(RPM_NAME)$(INSTALL_DIR)
+	rpmbuild -bb $(BIN).spec --define="_topdir $$(pwd)/$(OUTDIR)"
+
+install-rpm:
+	rpm -i ./$(OUTDIR)/RPMS/$(ARCH_RPM)/$(RPM)
+
+uninstall-rpm:
+	rpm -e $(BIN)
+
+clean-rpm:
+	rm -rf ./$(OUTDIR)/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
 

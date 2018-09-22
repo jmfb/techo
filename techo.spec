@@ -1,20 +1,16 @@
-Name:    techo
+Name: techo
 Version: 1.0.0
 Release: 1
-Summary: Timestamp echo.
-License: GPLv3
-URL:     https://github.com/jmfb/techo
-
-BuildRequires: make,gcc-c++
+License: GPLv3+
+URL: https://github.com/jmfb/techo
+Packager: Jacob Buysse <jacob.buysse@gmail.com>
+Summary: Timestamp echo
+AutoReqProv: no
 
 %description
-Timestamp echo.
-
-%install
-make install
+Basic echo functionality but with a timestamp at the beginning of every line.
 
 %files
+%defattr(0755,root,root,0755)
 /usr/local/bin/techo
 
-%changelog
-#TODO
